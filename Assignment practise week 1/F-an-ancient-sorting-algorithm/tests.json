@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "name": "sample parity runs",
+      "input": "7\n4 2 4 7 1 6 1\n",
+      "output": "2 4 4 1 7 6 1\n"
+    },
+    {
+      "name": "one odd run",
+      "input": "5\n3 5 9 7 1\n",
+      "output": "1 3 5 7 9\n"
+    },
+    {
+      "name": "single item",
+      "input": "1\n221\n",
+      "output": "221\n"
+    }
+  ]
+}

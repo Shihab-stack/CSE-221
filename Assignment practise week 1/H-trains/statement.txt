@@ -1,0 +1,40 @@
+Problem H: Trains?
+
+Sort train descriptions by train name in lexicographical order. If several
+trains have the same name, place the train with the latest departure time
+first. If both the name and time are tied, preserve their input order.
+
+Each description has this format:
+TrainName will departure for Destination at HH:MM
+Train names and destinations contain no spaces.
+
+Input
+The first line contains N (1 <= N <= 100). Each of the next N lines is one
+train description. Names and destinations have length at most 100.
+
+Output
+Print all descriptions in the specified order, preserving each line's
+original text.
+
+Example
+Input:
+8
+ABCD will departure for Mymensingh at 00:30
+DhumketuExpress will departure for Chittagong at 02:30
+ABC will departure for Dhaka at 17:30
+ABCD will departure for Chittagong at 01:00
+ABC will departure for Khulna at 03:00
+ABC will departure for Barisal at 03:00
+ABCE will departure for Sylhet at 23:05
+PadmaExpress will departure for Dhaka at 19:30
+Output:
+ABC will departure for Dhaka at 17:30
+ABC will departure for Khulna at 03:00
+ABC will departure for Barisal at 03:00
+ABCD will departure for Chittagong at 01:00
+ABCD will departure for Mymensingh at 00:30
+ABCE will departure for Sylhet at 23:05
+DhumketuExpress will departure for Chittagong at 02:30
+PadmaExpress will departure for Dhaka at 19:30
+
+Any built-in sorting function may be used for this problem.

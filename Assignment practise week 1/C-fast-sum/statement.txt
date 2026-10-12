@@ -1,0 +1,29 @@
+Problem C: Fast Sum
+
+For each test case, find the sum 1 + 2 + ... + N. N may be large, so use an
+efficient calculation rather than adding every integer one by one.
+
+Input
+The first line contains T (1 <= T <= 10^4). Each of the next T lines contains
+an integer N (1 <= N <= 10^6).
+
+Output
+For each test case, print the sum from 1 through N.
+
+Example
+Input:
+5
+2
+5
+10
+12
+100
+Output:
+3
+15
+55
+78
+5050
+
+Forbidden keywords in the solution: sort, open, file, creat(, fstream, thread,
+process, system(, exec(.

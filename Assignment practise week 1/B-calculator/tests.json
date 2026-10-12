@@ -1,0 +1,22 @@
+{
+  "cases": [
+    {
+      "name": "sample with division and shifts",
+      "input": "5\ncalculate 1 + 3\ncalculate 9 / 4\ncalculate 9 % 4\ncalculate 5 << 1\ncalculate 5 >> 1\n",
+      "output": "4\n2.25\n1\n10\n2\n",
+      "tolerance": 0.000001
+    },
+    {
+      "name": "all operators",
+      "input": "8\ncalculate 5 - 8\ncalculate 7 * 6\ncalculate 8 / 4\ncalculate 13 % 5\ncalculate 5 & 6\ncalculate 5 | 6\ncalculate 5 ^ 6\ncalculate 1000 << 3\n",
+      "output": "-3\n42\n2\n3\n4\n7\n3\n8000\n",
+      "tolerance": 0.000001
+    },
+    {
+      "name": "fractional division",
+      "input": "2\ncalculate 9 / 4\ncalculate 749 / 291\n",
+      "output": "2.25\n2.5738831615\n",
+      "tolerance": 0.000001
+    }
+  ]
+}

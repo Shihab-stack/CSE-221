@@ -1,0 +1,29 @@
+Problem E: Reverse Sorting
+
+You are given an array A. One operation selects a subarray of exactly three
+consecutive elements and reverses it. Determine whether it is possible to
+sort A in non-decreasing order using zero or more such operations. If it is
+possible, print a sequence of valid operations that sorts the array.
+
+Input
+The first line contains N (1 <= N <= 1000). The second line contains N
+integers (1 <= A[i] <= 10^5).
+
+Output
+If the array cannot be sorted this way, print NO.
+Otherwise print YES, then M (the number of operations), then M lines. Each
+operation is a pair i j, using 1-based indices, with j - i + 1 = 3. The listed
+operations must sort the original array.
+
+Example
+Input:
+4
+2 3 1 1
+Output:
+YES
+2
+1 3
+2 4
+
+Forbidden keywords in the solution: sort, open, file, creat(, fstream, thread,
+process, system(, exec(.

@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {
+      "name": "sample",
+      "input": "5\n10\n19\n7\n3\n100\n",
+      "output": "10 is an Even number.\n19 is an Odd number.\n7 is an Odd number.\n3 is an Odd number.\n100 is an Even number.\n"
+    },
+    {
+      "name": "negative numbers",
+      "input": "4\n-4\n-3\n0\n1\n",
+      "output": "-4 is an Even number.\n-3 is an Odd number.\n0 is an Even number.\n1 is an Odd number.\n"
+    }
+  ]
+}

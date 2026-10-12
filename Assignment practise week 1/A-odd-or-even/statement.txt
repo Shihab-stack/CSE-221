@@ -1,0 +1,31 @@
+Problem A: Odd or Even?
+
+You are given T numbers. For each number, report whether it is odd or even.
+
+Input
+The first line contains T (1 <= T <= 100). Each of the next T lines contains
+an integer N (-10^5 <= N <= 10^5).
+
+Output
+For each N, print exactly one line:
+  N is an Even number.
+or
+  N is an Odd number.
+
+Example
+Input:
+5
+10
+19
+7
+3
+100
+Output:
+10 is an Even number.
+19 is an Odd number.
+7 is an Odd number.
+3 is an Odd number.
+100 is an Even number.
+
+Forbidden keywords in the solution: sort, open, file, creat(, fstream, thread,
+process, system(, exec(.

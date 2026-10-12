@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {
+      "name": "sample with minimum swaps",
+      "input": "2\n7\n7 4 9 3 2 5 1\n40 50 50 20 10 10 10\n3\n1 2 3\n40 59 10\n",
+      "output": "Minimum swaps: 4\nID: 4 Mark: 50\nID: 9 Mark: 50\nID: 7 Mark: 40\nID: 3 Mark: 20\nID: 1 Mark: 10\nID: 2 Mark: 10\nID: 5 Mark: 10\nMinimum swaps: 1\nID: 2 Mark: 59\nID: 1 Mark: 40\nID: 3 Mark: 10\n"
+    },
+    {
+      "name": "already ordered and tied marks",
+      "input": "1\n3\n1 2 3\n50 50 10\n",
+      "output": "Minimum swaps: 0\nID: 1 Mark: 50\nID: 2 Mark: 50\nID: 3 Mark: 10\n"
+    }
+  ]
+}

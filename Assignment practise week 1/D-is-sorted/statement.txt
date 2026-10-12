@@ -1,0 +1,31 @@
+Problem D: Is Sorted?
+
+Determine whether each given array is in non-decreasing order. An array is
+non-decreasing when every element is less than or equal to the next element.
+Equal adjacent values are allowed.
+
+Input
+The first line contains T (1 <= T <= 100). Each test case consists of:
+- an integer N (1 <= N <= 10^4);
+- a line of N integers (1 <= A[i] <= 10^6).
+
+Output
+For each test case, print YES if the array is non-decreasing; otherwise print
+NO.
+
+Example
+Input:
+3
+4
+1 2 3 3
+4
+1 5 2 6
+1
+5
+Output:
+YES
+NO
+YES
+
+Forbidden keywords in the solution: sort, open, file, creat(, fstream, thread,
+process, system(, exec(.

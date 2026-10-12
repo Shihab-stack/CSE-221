@@ -1,0 +1,45 @@
+Problem G: Sorting Again??
+
+Each student has a unique ID and a mark. Order students by decreasing mark;
+when marks are equal, the lower ID comes first. Find the minimum number of
+arbitrary swaps of two students needed to reach that order, and print the
+ordered student records. The number of swaps is the minimum over all possible
+sequences of swaps.
+
+Input
+The first line contains T (1 <= T <= 100). Each test case consists of:
+- N (1 <= N <= 1000);
+- N distinct student IDs (1 <= ID <= 1000);
+- N marks (1 <= mark <= 1000), corresponding to those IDs in order.
+
+Output
+For each test case, print:
+Minimum swaps: X
+followed by N lines in the required order, each formatted as:
+ID: student_id Mark: mark
+
+Example
+Input:
+2
+7
+7 4 9 3 2 5 1
+40 50 50 20 10 10 10
+3
+1 2 3
+40 59 10
+Output:
+Minimum swaps: 4
+ID: 4 Mark: 50
+ID: 9 Mark: 50
+ID: 7 Mark: 40
+ID: 3 Mark: 20
+ID: 1 Mark: 10
+ID: 2 Mark: 10
+ID: 5 Mark: 10
+Minimum swaps: 1
+ID: 2 Mark: 59
+ID: 1 Mark: 40
+ID: 3 Mark: 10
+
+Forbidden keywords in the solution: sort, open, file, creat(, fstream, thread,
+process, system(, exec(.

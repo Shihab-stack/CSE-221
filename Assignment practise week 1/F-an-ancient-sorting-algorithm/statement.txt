@@ -1,0 +1,25 @@
+Problem F: An Ancient Sorting Algorithm
+
+You are given an array of N integers. You may swap two neighboring elements
+only when both elements have the same parity (both are even or both are odd).
+Apply such swaps until no allowed swap can make the array more ordered, then
+print the resulting array. Equivalently, each maximal contiguous segment of
+values with the same parity is sorted in non-decreasing order; values cannot
+move across a neighboring value of the other parity.
+
+Input
+The first line contains N (1 <= N <= 1000). The second line contains N
+integers (1 <= A[i] <= 10^6).
+
+Output
+Print the final array in one line, with values separated by spaces.
+
+Example
+Input:
+7
+4 2 4 7 1 6 1
+Output:
+2 4 4 1 7 6 1
+
+Forbidden keywords in the solution: sort, open, file, creat(, fstream, thread,
+process, system(, exec(.

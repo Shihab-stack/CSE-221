@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {
+      "name": "sample with lexical names and departure times",
+      "input": "8\nABCD will departure for Mymensingh at 00:30\nDhumketuExpress will departure for Chittagong at 02:30\nABC will departure for Dhaka at 17:30\nABCD will departure for Chittagong at 01:00\nABC will departure for Khulna at 03:00\nABC will departure for Barisal at 03:00\nABCE will departure for Sylhet at 23:05\nPadmaExpress will departure for Dhaka at 19:30\n",
+      "output": "ABC will departure for Dhaka at 17:30\nABC will departure for Khulna at 03:00\nABC will departure for Barisal at 03:00\nABCD will departure for Chittagong at 01:00\nABCD will departure for Mymensingh at 00:30\nABCE will departure for Sylhet at 23:05\nDhumketuExpress will departure for Chittagong at 02:30\nPadmaExpress will departure for Dhaka at 19:30\n"
+    },
+    {
+      "name": "same name uses later time and stable tie",
+      "input": "4\nRail will departure for North at 09:00\nRail will departure for East at 11:30\nRail will departure for West at 11:30\nAlpha will departure for South at 01:00\n",
+      "output": "Alpha will departure for South at 01:00\nRail will departure for East at 11:30\nRail will departure for West at 11:30\nRail will departure for North at 09:00\n"
+    }
+  ]
+}

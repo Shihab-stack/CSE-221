@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {
+      "name": "sample",
+      "input": "5\n2\n5\n10\n12\n100\n",
+      "output": "3\n15\n55\n78\n5050\n"
+    },
+    {
+      "name": "lower and upper bounds",
+      "input": "3\n1\n1000000\n999999\n",
+      "output": "1\n500000500000\n499999500000\n"
+    }
+  ]
+}
