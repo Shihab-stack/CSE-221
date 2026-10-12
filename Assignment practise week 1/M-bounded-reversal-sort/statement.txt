@@ -1,0 +1,27 @@
+Problem M: Bounded Reversal Sort
+
+You are given an array of N integers and a positive integer K. In one
+operation, choose any contiguous subarray of length at most K and reverse
+its elements. Determine whether it is possible to sort the entire array in
+ascending order using this operation any number of times.
+
+Input
+The first line contains N and K (0 < N < 1000, 0 < K < 5). The second line
+contains N integers. The absolute value of each integer is less than 1000.
+
+Output
+Print "Possible" if the array can be sorted in ascending order, or
+"Impossible" otherwise.
+
+Example
+Input:
+7 4
+-2 8 32 128 4 16 64
+Output:
+Possible
+
+Input:
+10 1
+17 42 89 23 67 -15 78 910 34 50
+Output:
+Impossible

@@ -1,0 +1,22 @@
+Problem O: Numbers First, Letters Stable
+
+An array contains either positive integers less than 1000 or single
+uppercase English letters. Sort the numeric values in ascending order and
+place them at the beginning. Keep all letters in their original relative
+order after the numbers. Solve using a quadratic-time sorting algorithm.
+
+Input
+The first line contains N (1 <= N <= 1000). The second line contains N
+space-separated tokens. Each token is either a positive integer less than
+1000 or one uppercase English letter.
+
+Output
+Print the numeric values in ascending order followed by the letters in
+their original order, all separated by spaces.
+
+Example
+Input:
+10
+7 2 C 3 A X 1 19 11 Z
+Output:
+1 2 3 7 11 19 C A X Z

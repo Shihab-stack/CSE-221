@@ -1,0 +1,26 @@
+Problem J: Selection Swap Audit
+
+You are given N distinct integers. Run the standard selection sort algorithm
+in ascending order: for each position i from left to right, find the smallest
+value in positions i through N-1 and swap it with the value at i. Do not
+record a swap when the smallest value is already at i.
+
+Input
+The first line contains N (1 <= N <= 2000). The second line contains N
+distinct integers, each between -10^9 and 10^9.
+
+Output
+Print S, the number of swaps performed. Then print each swap as two
+1-based positions, in the order the swaps occur. Print the final sorted
+array on the last line.
+
+Example
+Input:
+5
+29 10 14 37 13
+Output:
+3
+1 2
+2 5
+4 5
+10 13 14 29 37

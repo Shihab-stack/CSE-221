@@ -1,0 +1,35 @@
+Problem I: Bubble Scoreboard
+
+A contest has N submissions. Each submission has a participant name and a
+score. Reorder the submissions by decreasing score. If scores are equal,
+preserve the original submission order. Count the adjacent swaps made by a
+stable bubble sort while producing this order.
+
+Input
+The first line contains N (1 <= N <= 2000). Each of the next N lines contains
+a participant name and an integer score (0 <= score <= 10^6). Names contain
+no spaces.
+
+Output
+Print the number of adjacent swaps on the first line. Then print the
+submissions in their final order, one per line as:
+name score
+
+Use bubble sort and swap neighboring submissions only when the left score is
+strictly smaller than the right score. Equal scores must not be swapped.
+
+Example
+Input:
+5
+Nora 80
+Imran 95
+Lina 80
+Ayan 70
+Rafi 95
+Output:
+5
+Imran 95
+Rafi 95
+Nora 80
+Lina 80
+Ayan 70

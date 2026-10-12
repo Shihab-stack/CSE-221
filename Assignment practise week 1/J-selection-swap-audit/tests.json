@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "name": "sample with three swaps",
+      "input": "5\n29 10 14 37 13\n",
+      "output": "3\n1 2\n2 5\n4 5\n10 13 14 29 37\n"
+    },
+    {
+      "name": "already sorted needs no swaps",
+      "input": "4\n-8 -2 0 9\n",
+      "output": "0\n-8 -2 0 9\n"
+    },
+    {
+      "name": "reverse order",
+      "input": "4\n4 3 2 1\n",
+      "output": "2\n1 4\n2 3\n1 2 3 4\n"
+    }
+  ]
+}

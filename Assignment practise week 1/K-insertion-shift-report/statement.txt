@@ -1,0 +1,24 @@
+Problem K: Insertion Shift Report
+
+You are given an array of integers. Process it from left to right using
+insertion sort. For each value, report how many earlier values were shifted
+one position to the right to insert it into the sorted prefix. A value moves
+past earlier values only when they are strictly greater, so equal values
+keep their original relative order.
+
+Input
+The first line contains N (1 <= N <= 2000). The second line contains N
+integers, each between -10^9 and 10^9.
+
+Output
+Print N integers on the first line. The i-th integer is the number of shifts
+caused while inserting the i-th input value. Print the final sorted array on
+the second line.
+
+Example
+Input:
+5
+5 2 2 4 1
+Output:
+0 1 0 1 4
+1 2 2 4 5

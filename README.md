@@ -1,10 +1,11 @@
 # DSA Assignment Practice (Python)
 
 A small, local-first workspace for practising data structures and algorithms,
-organised by week. **Assignment practise week 1** contains exactly the eight
-A-H problems from the provided CSE221 assignment. Each problem has a plain-text
-statement, a Python starter, and runnable tests. Keep each week's assignment
-problems directly inside its week folder rather than in extra subfolders.
+organised by week. **Assignment practise week 1** contains the eight A-H
+problems from the provided CSE221 assignment, followed by additional sorting
+practice problems I-O. Each problem has a plain-text statement, a Python
+starter, and runnable tests. Keep each week's assignment problems directly
+inside its week folder rather than in extra subfolders.
 
 ## Requirements
 

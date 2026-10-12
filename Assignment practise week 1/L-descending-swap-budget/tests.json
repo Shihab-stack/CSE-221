@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "name": "sample exceeds swap budget",
+      "input": "10 7\n17 42 89 23 67 -15 78 910 34 50\n",
+      "output": "Impossible\n"
+    },
+    {
+      "name": "sample within swap budget",
+      "input": "7 6\n-2 8 32 128 4 16 64\n",
+      "output": "Possible\n"
+    },
+    {
+      "name": "already descending",
+      "input": "3 1\n9 4 -2\n",
+      "output": "Possible\n"
+    },
+    {
+      "name": "requires two swaps with budget one",
+      "input": "4 1\n1 2 3 4\n",
+      "output": "Impossible\n"
+    }
+  ]
+}

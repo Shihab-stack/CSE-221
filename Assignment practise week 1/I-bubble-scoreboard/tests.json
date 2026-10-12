@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "name": "sample with stable ties and swap count",
+      "input": "5\nNora 80\nImran 95\nLina 80\nAyan 70\nRafi 95\n",
+      "output": "4\nImran 95\nRafi 95\nNora 80\nLina 80\nAyan 70\n"
+    },
+    {
+      "name": "already ordered equal scores",
+      "input": "4\nA 10\nB 10\nC 8\nD 1\n",
+      "output": "0\nA 10\nB 10\nC 8\nD 1\n"
+    },
+    {
+      "name": "reverse order",
+      "input": "4\nA 1\nB 2\nC 3\nD 4\n",
+      "output": "6\nD 4\nC 3\nB 2\nA 1\n"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "name": "sample numbers and stable letters",
+      "input": "10\n7 2 C 3 A X 1 19 11 Z\n",
+      "output": "1 2 3 7 11 19 C A X Z\n"
+    },
+    {
+      "name": "all letters retain their order",
+      "input": "5\nZ A C B X\n",
+      "output": "Z A C B X\n"
+    },
+    {
+      "name": "all numbers in descending input order",
+      "input": "4\n9 100 2 1\n",
+      "output": "1 2 9 100\n"
+    }
+  ]
+}

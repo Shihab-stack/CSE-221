@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "name": "sample with reversal length four",
+      "input": "7 4\n-2 8 32 128 4 16 64\n",
+      "output": "Possible\n"
+    },
+    {
+      "name": "length one cannot reorder an unsorted array",
+      "input": "5 1\n4 1 3 2 5\n",
+      "output": "Impossible\n"
+    },
+    {
+      "name": "already sorted with length one",
+      "input": "4 1\n-3 0 2 9\n",
+      "output": "Possible\n"
+    },
+    {
+      "name": "length two can sort using adjacent reversals",
+      "input": "5 2\n5 4 3 2 1\n",
+      "output": "Possible\n"
+    }
+  ]
+}
