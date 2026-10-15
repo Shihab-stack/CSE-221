@@ -2,8 +2,10 @@ import sys
 
 
 def solve():
-    raise NotImplementedError("Implement according to statement.txt")
+	data = sys.stdin.buffer.read().split()
+	
+	pass
 
 
 if __name__ == "__main__":
-    solve()
+	solve()

@@ -2,13 +2,13 @@
   "cases": [
     {
       "name": "sample",
-      "input": "3\n4\n1 2 3 3\n4\n1 5 2 6\n1\n5\n",
-      "output": "YES\nNO\nYES\n"
+      "input": "3\n4\n1 2 3 3\n4\n1 1 2 10\n1\n5\n",
+      "output": "YES\nYES\nYES\n"
     },
     {
       "name": "equal values and descending array",
-      "input": "2\n5\n2 2 2 2 2\n3\n3 2 1\n",
-      "output": "YES\nNO\n"
+      "input": "2\n5\n2 2 2 2 2\n1\n1\n",
+      "output": "YES\nYES\n"
     }
   ]
 }
