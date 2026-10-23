@@ -2,16 +2,16 @@ import sys
 
 
 def solve():
-    
-    
+    # Read how many values are coming.
+    test_count = int(sys.stdin.readline())
 
-    n=int(sys.stdin.readline())
-    for i in range (n):
-        a=int(sys.stdin.readline())
-        if a%2==0:
-            sys.stdout.write(str(a)+" is an Even number.\n")
+    # Check each value and write its parity message.
+    for _ in range(test_count):
+        value = int(sys.stdin.readline())
+        if value % 2 == 0:
+            print(f"{value} is an Even number.")
         else:
-            sys.stdout.write(str(a)+" is an Odd number.\n")
+            print(f"{value} is an Odd number.")
 
 
 if __name__ == "__main__":

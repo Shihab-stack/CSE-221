@@ -2,55 +2,61 @@
   "cases": [
     {
       "name": "sortable sample",
-      "input": "4\n2 3 1 1\n",
+      "input": "1\n4\n2 3 1 1\n",
       "output": "YES\n2\n1 3\n2 4\n",
       "validator": "reverse-triplets"
     },
     {
       "name": "impossible parity arrangement",
-      "input": "6\n2 5 5 1 5 5\n",
+      "input": "1\n6\n2 5 5 1 5 5\n",
       "output": "NO\n",
-     "validator": "reverse-triplets"
+      "validator": "reverse-triplets"
     },
     {
       "name": "already sorted",
-      "input": "1\n2\n",
+      "input": "1\n1\n2\n",
       "output": "YES\n0\n",
       "validator": "reverse-triplets"
     },
     {
       "name": "minimum size and maximum value",
-      "input": "1\n100000\n",
+      "input": "1\n1\n100000\n",
       "output": "",
       "validator": "reverse-triplets"
     },
     {
       "name": "two elements cannot be swapped",
-      "input": "2\n2 1\n",
+      "input": "1\n2\n2 1\n",
       "output": "NO\n",
       "validator": "reverse-triplets"
     },
     {
       "name": "three elements sorted by one operation",
-      "input": "3\n3 2 1\n",
+      "input": "1\n3\n3 2 1\n",
       "output": "",
       "validator": "reverse-triplets"
     },
     {
       "name": "parity mismatch makes sorting impossible",
-      "input": "3\n2 1 3\n",
+      "input": "1\n3\n2 1 3\n",
       "output": "NO\n",
       "validator": "reverse-triplets"
     },
     {
       "name": "duplicates with multiple operations",
-      "input": "6\n3 1 2 3 1 2\n",
+      "input": "1\n6\n3 1 2 3 1 2\n",
       "output": "",
       "validator": "reverse-triplets"
     },
     {
       "name": "sortable array needs more than one pass",
-      "input": "6\n5 6 3 4 1 2\n",
+      "input": "1\n6\n5 6 3 4 1 2\n",
+      "output": "",
+      "validator": "reverse-triplets"
+    },
+    {
+      "name": "multiple test cases",
+      "input": "9\n4\n2 3 1 1\n6\n2 5 5 1 5 5\n1\n2\n1\n100000\n2\n2 1\n3\n3 2 1\n3\n2 1 3\n6\n3 1 2 3 1 2\n6\n5 6 3 4 1 2\n",
       "output": "",
       "validator": "reverse-triplets"
     }

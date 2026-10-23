@@ -41,36 +41,58 @@ def reverse_triplets_match(input_text, output_text):
         input_values = [int(token) for token in input_text.split()]
         if not input_values:
             return False
-        n, values = input_values[0], input_values[1:]
-        if n < 1 or len(values) != n:
+        test_count = input_values[0]
+        if test_count < 1:
             return False
-
         tokens = output_text.split()
-        if not tokens:
-            return False
-        target = sorted(values)
-        can_sort = (
-            sorted(values[::2]) == target[::2]
-            and sorted(values[1::2]) == target[1::2]
-        )
+        input_pos = 1
+        output_pos = 0
 
-        if tokens[0] == "NO":
-            return len(tokens) == 1 and not can_sort
-        if tokens[0] != "YES" or not can_sort or len(tokens) < 2:
-            return False
-
-        move_count = int(tokens[1])
-        if move_count < 0 or len(tokens) != 2 + 2 * move_count:
-            return False
-        for offset in range(2, len(tokens), 2):
-            left, right = int(tokens[offset]), int(tokens[offset + 1])
-            if left < 1 or right - left != 2 or right > n:
+        # Validate each case's answer and apply its listed endpoint exchanges.
+        for _ in range(test_count):
+            if input_pos >= len(input_values):
                 return False
-            values[left - 1], values[right - 1] = (
-                values[right - 1],
-                values[left - 1],
+            n = input_values[input_pos]
+            input_pos += 1
+            values = input_values[input_pos:input_pos + n]
+            input_pos += n
+            if n < 1 or len(values) != n or output_pos >= len(tokens):
+                return False
+
+            target = sorted(values)
+            can_sort = (
+                sorted(values[::2]) == target[::2]
+                and sorted(values[1::2]) == target[1::2]
             )
-        return values == target
+
+            if tokens[output_pos] == "NO":
+                output_pos += 1
+                if can_sort:
+                    return False
+                continue
+            if tokens[output_pos] != "YES" or not can_sort:
+                return False
+            output_pos += 1
+            if output_pos >= len(tokens):
+                return False
+
+            move_count = int(tokens[output_pos])
+            output_pos += 1
+            if move_count < 0 or output_pos + 2 * move_count > len(tokens):
+                return False
+            for _ in range(move_count):
+                left = int(tokens[output_pos])
+                right = int(tokens[output_pos + 1])
+                output_pos += 2
+                if left < 1 or right - left != 2 or right > n:
+                    return False
+                values[left - 1], values[right - 1] = values[right - 1], values[left - 1]
+
+            if values != target:
+                return False
+
+        # Reject extra input values or output tokens after the final case.
+        return input_pos == len(input_values) and output_pos == len(tokens)
     except ValueError:
         return False
 

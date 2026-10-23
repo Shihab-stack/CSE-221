@@ -2,36 +2,47 @@ import sys
 
 
 def solve():
-    read = sys.stdin.readline
-    write = sys.stdout.write
-    n = int(read())
-    gi = lambda:list(map(int,read().split()))
-    gs = lambda: list(read().split())
-    store =[]
-    arr= gi()
-    while True:
-        changed =False
-        for i in range(n-2):
-            if arr[i]> arr[i+2]:
-                arr[i] ,arr[i+2] = arr[i+2] ,arr[i]
-                store.append(i+1)
-                changed= True 
-        if not changed:
-            break
+    # Read all tokens so each test case can be handled in sequence.
+    data = list(map(int, sys.stdin.buffer.read().split()))
+    if not data:
+        return
 
-    #checking the array
-    sorted = True 
-    for i in range(n-1):
-        if arr[i]>arr[i+1]:
-            sorted =False
+    test_count = data[0]
+    position = 1
+    results = []
 
-    if sorted:
-        print("YES")
-        print(len(store))
-        
-        for idx in store:
-            print (f"{idx} {idx+2}")        
-    else:
-        print("\nNO")        
+    for _ in range(test_count):
+        # Read one array and prepare a list of the operations we perform.
+        length = data[position]
+        position += 1
+        values = data[position:position + length]
+        position += length
+        operations = []
+
+        # Repeatedly exchange endpoints two places apart when they are out of order.
+        changed = True
+        while changed:
+            changed = False
+            for index in range(length - 2):
+                if values[index] > values[index + 2]:
+                    values[index], values[index + 2] = values[index + 2], values[index]
+                    operations.append(index + 1)  # Save the left 1-based position.
+                    changed = True
+
+        # A length-three reversal leaves the middle value in place, so the two
+        # parity groups cannot cross; a remaining inversion makes this case impossible.
+        ordered = all(values[index] <= values[index + 1] for index in range(length - 1))
+        if not ordered:
+            results.append("NO")
+            continue
+
+        # Print the decision, operation count, and each interval of length three.
+        lines = ["YES", str(len(operations))]
+        lines.extend(f"{left} {left + 2}" for left in operations)
+        results.append("\n".join(lines))
+
+    sys.stdout.write("\n".join(results) + "\n")
+
+
 if __name__ == "__main__":
     solve()

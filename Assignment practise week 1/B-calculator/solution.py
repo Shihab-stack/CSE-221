@@ -2,36 +2,38 @@ import sys
 
 
 def solve():
-    term = sys.stdin.readline()
-    
-    for _ in range (int(term)):
-        _ , val1, op , val2 = sys.stdin.readline().split()
-        a = int(val1)
-        b= int(val2)
-    
-        
-        ans=None
-        if op =="+":
-             ans= a+b
-        elif op =="-":
-             ans = a-b
-        elif op =="*":
-             ans = a*b 
-        elif op =="/":
-             ans = a/b
-        elif op =="%":
-             ans= a%b
-        elif op =="&":
-             ans = a&b
-        elif op =="|":
-             ans = a|b
-        elif op =="^":
-             ans =a^b
-        elif op =="<<":
-             ans= a<<b
-        elif op ==">>":
-             ans= a>>b
-        sys.stdout.write(str(ans)+"\n")  
+    # Read the number of expressions.
+    test_count = int(sys.stdin.readline())
+
+    for _ in range(test_count):
+        # Ignore the leading word and read the two values and their operator.
+        _, first_text, operator, second_text = sys.stdin.readline().split()
+        first = int(first_text)
+        second = int(second_text)
+
+        # Use the matching Python operation for each allowed symbol.
+        if operator == "+":
+            answer = first + second
+        elif operator == "-":
+            answer = first - second
+        elif operator == "*":
+            answer = first * second
+        elif operator == "/":
+            answer = first / second
+        elif operator == "%":
+            answer = first % second
+        elif operator == "&":
+            answer = first & second
+        elif operator == "|":
+            answer = first | second
+        elif operator == "^":
+            answer = first ^ second
+        elif operator == "<<":
+            answer = first << second
+        else:  # The only remaining allowed operator is >>.
+            answer = first >> second
+
+        print(answer)
 
 
 if __name__ == "__main__":

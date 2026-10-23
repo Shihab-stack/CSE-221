@@ -2,25 +2,24 @@ import sys
 
 
 def solve():
-	read = sys.stdin.readline
-	write = sys.stdout.write
-	gi = lambda:list(map(int,read().split()))
-	n = int(read())
-	arr = gi()
-	for i in range(n) :
-		
-		for j in range(n-i-1):
-			if arr[j]%2==0 and arr[j+1]%2==0 and arr[j] >arr[j+1]:
-				arr[j] , arr[j+1] = arr[j+1] ,arr[j]
-				
-			if arr[j]%2!=0 and arr[j+1]%2!=0 and arr[j] >arr[j+1]:
-							arr[j] , arr[j+1] = arr[j+1] ,arr[j]
-							
-			
-	for i in arr:
-		write(str(i)+" ")				
+    # Read the array and visit each adjacent pair over several passes.
+    read = sys.stdin.readline
+    length = int(read())
+    values = list(map(int, read().split()))
 
+    for end in range(length - 1, 0, -1):
+        for index in range(end):
+            left = values[index]
+            right = values[index + 1]
+
+            # Exchange neighbors only when they share parity and are reversed.
+            same_parity = left % 2 == right % 2
+            if same_parity and left > right:
+                values[index], values[index + 1] = right, left
+
+    # Keep the final sequence on one line.
+    print(*values)
 
 
 if __name__ == "__main__":
-	solve()
+    solve()

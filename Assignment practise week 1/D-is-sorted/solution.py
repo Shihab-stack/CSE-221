@@ -2,24 +2,23 @@ import sys
 
 
 def solve():
+    # Read each test array and compare every neighboring pair.
     read = sys.stdin.readline
-    write = sys.stdout.write
-    term = int(read())
-    for _ in range(term):
-        n = int(read())
-        arr= list(map(int,read().split()))
-        flag = True
-        for i in range(n-1):
-            if  arr[i]>arr[i+1]:
-                flag = False
+    test_count = int(read())
+
+    for _ in range(test_count):
+        length = int(read())
+        values = list(map(int, read().split()))
+
+        # A single descending neighbor proves the array is not non-decreasing.
+        ordered = True
+        for index in range(length - 1):
+            if values[index] > values[index + 1]:
+                ordered = False
                 break
 
-        if flag==True:
-            write("YES\n")
-        else:
-            write("NO\n")        
+        print("YES" if ordered else "NO")
 
-            
 
 if __name__ == "__main__":
     solve()

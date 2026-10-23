@@ -28,7 +28,7 @@ Ayan 70
 Rafi 95
 
 Output:
-5
+4
 Imran 95
 Rafi 95
 Nora 80
