@@ -10,7 +10,7 @@
       "name": "impossible parity arrangement",
       "input": "6\n2 5 5 1 5 5\n",
       "output": "NO\n",
-      "validator": "reverse-triplets"
+     "validator": "reverse-triplets"
     },
     {
       "name": "already sorted",

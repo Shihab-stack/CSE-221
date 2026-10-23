@@ -26,6 +26,7 @@ Imran 95
 Lina 80
 Ayan 70
 Rafi 95
+
 Output:
 5
 Imran 95

@@ -206,7 +206,7 @@ def main():
             passed += 1
             print(f"PASS: {case['name']}")
         else:
-            print(f"WRONG ANSWER: {case['name']}")
+            print(f"WA : {case['name']}")
             expectation = (
                 "a valid reverse-triplet result"
                 if validator == "reverse-triplets"
